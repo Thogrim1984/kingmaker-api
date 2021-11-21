@@ -10,7 +10,7 @@ if (isset($postdata) && !empty($postdata)) {
 
 
     // Validate.
-    if ((int)$request->data->kingdomId < 1 || (int)$request->data->year < 1 || (int)$request->data->month < 1 || (int)$request->data->month > 12 || (int)$request->data->phase < 1 || (int)$request->data->month > 4 || (int)$request->data->step < 1 || (int)$request->data->step > 6) {
+    if ((int)$request->data->kingdomId < 1 || (int)$request->data->year < 1 || (int)$request->data->month < 1 || (int)$request->data->month > 12 || (int)$request->data->phase < 0 || (int)$request->data->phase > 4 || (int)$request->data->step < 0 || (int)$request->data->step > 6) {
         return http_response_code(400);
     }
 
