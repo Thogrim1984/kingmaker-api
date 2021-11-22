@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 21. Nov 2021 um 18:18
+-- Erstellungszeit: 21. Nov 2021 um 22:16
 -- Server-Version: 10.4.19-MariaDB
 -- PHP-Version: 8.0.7
 
@@ -32,17 +32,18 @@ CREATE TABLE `kingdoms` (
   `vc_name` varchar(255) NOT NULL,
   `i_bp` int(11) NOT NULL,
   `i_unrest` int(11) NOT NULL,
-  `i_districts` int(11) NOT NULL
+  `i_districts` int(11) NOT NULL,
+  `i_hexfields` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Daten für Tabelle `kingdoms`
 --
 
-INSERT INTO `kingdoms` (`l_id`, `vc_name`, `i_bp`, `i_unrest`, `i_districts`) VALUES
-(1, 'Mwangisien', 29, 2, 5),
-(5, 'Rußschuppen', 29, 10, 1),
-(8, 'Testkönigreich', 5, 2, 5);
+INSERT INTO `kingdoms` (`l_id`, `vc_name`, `i_bp`, `i_unrest`, `i_districts`, `i_hexfields`) VALUES
+(1, 'Mwangisien', 29, 2, 5, 0),
+(5, 'Rußschuppen', 29, 10, 1, 0),
+(8, 'Testkönigreich', 5, 2, 5, 0);
 
 -- --------------------------------------------------------
 

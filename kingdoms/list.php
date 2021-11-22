@@ -5,7 +5,7 @@
 require '../connect.php';
     
 $kingdoms = [];
-$sql = "SELECT l_id, vc_name, i_bp, i_unrest, i_districts FROM kingdoms";
+$sql = "SELECT l_id, vc_name, i_bp, i_unrest, i_districts, i_hexfields FROM kingdoms";
 
 if($result = mysqli_query($con,$sql))
 {
@@ -17,6 +17,7 @@ if($result = mysqli_query($con,$sql))
     $kingdoms[$cr]['bp'] = $row['i_bp'];
     $kingdoms[$cr]['unrest'] = $row['i_unrest'];
     $kingdoms[$cr]['districts'] = $row['i_districts'];
+    $kingdoms[$cr]['hexfields'] = $row['i_hexfields'];
     $cr++;
   }
     
