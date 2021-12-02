@@ -28,7 +28,7 @@ if (isset($postdata) && !empty($postdata)) {
 
 
     // Store.
-    $sql = "INSERT INTO `kingdoms`(`l_id`,`l_kingdom_id`,`i_year`,`i_month`,`i_phase`,`i_step`,`i_bp_changes`,`i_unrest_changes`,`i_district_changes`,`i_hexfield_changes`,`i_infos`) VALUES (null,'{$kingdomId}','{$year}','{$month}','{$phase}','{$step}','{$bpChanges}','{$unrestChanges}','{$districtChanges}','{$hexfieldChanges}','{$infos}')";
+    $sql = "INSERT INTO `kingdom_round_log`(`l_id`,`l_kingdom_id`,`i_year`,`i_month`,`i_phase`,`i_step`,`i_bp_changes`,`i_unrest_changes`,`i_district_changes`,`i_hexfield_changes`,`t_infos`) VALUES (null,'{$kingdomId}','{$year}','{$month}','{$phase}','{$step}','{$bpChanges}','{$unrestChanges}','{$districtChanges}','{$hexfieldChanges}','{$infos}')";
 
     if (mysqli_query($con, $sql)) {
         http_response_code(201);
