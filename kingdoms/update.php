@@ -24,7 +24,7 @@ if (isset($postdata) && !empty($postdata)) {
     $hexfields = mysqli_real_escape_string($con, (int)$request->data->hexfields);
 
     // Update.
-    $sql = "UPDATE `kingdoms` SET `vc_name`='$name',`i_bp`='$bp',`i_unrest`='$unrest',`i_districts`='$districts',`i_hexfields`='$hexfields'  WHERE `l_id` = '{$id}' LIMIT 1";
+    $sql = "UPDATE `kingdoms` SET `vc_name`='$name',`i_bp`=$bp,`i_unrest`=$unrest,`i_districts`=$districts,`i_hexfields`=$hexfields  WHERE `l_id` = $id LIMIT 1";
 
     if (mysqli_query($con, $sql)) {
         http_response_code(204);
