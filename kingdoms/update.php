@@ -43,7 +43,11 @@ if (isset($postdata) && !empty($postdata)) {
     $edictTaxationTier = mysqli_real_escape_string($con, (int)$request->data->edictTaxationTier);
 
     // Update.
+<<<<<<< HEAD
     $sql = "UPDATE `kingdoms` SET `vc_name`='$name',`i_bp`='$bp',`i_unrest`='$unrest',`i_districts`='$districts',`i_hexfields`='$hexfields',`i_edict_holidays_tier`='$edictHolidaysTier',`i_edict_promotion_tier`='$edictPromotionTier',`i_edict_promotion_tier`='$edictPromotionTier'  WHERE `l_id` = '{$id}' LIMIT 1";
+=======
+    $sql = "UPDATE `kingdoms` SET `vc_name`='$name',`i_bp`=$bp,`i_unrest`=$unrest,`i_districts`=$districts,`i_hexfields`=$hexfields  WHERE `l_id` = $id LIMIT 1";
+>>>>>>> origin/master
 
     if (mysqli_query($con, $sql)) {
         http_response_code(204);

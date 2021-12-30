@@ -18,13 +18,13 @@ if (isset($postdata) && !empty($postdata)) {
     $kingdomId = mysqli_real_escape_string($con, (int)$request->data->kingdomId);
     $year = mysqli_real_escape_string($con, (int)$request->data->year);
     $month = mysqli_real_escape_string($con, (int)$request->data->month);
-    $phase = mysqli_real_escape_string($con, (int)$request->data->step->phase);
-    $step = mysqli_real_escape_string($con, (int)$request->data->step->step);
-    $infos = mysqli_real_escape_string($con, trim($request->data->infos));
+    $phase = mysqli_real_escape_string($con, (int)$request->data->phase);
+    $step = mysqli_real_escape_string($con, (int)$request->data->step);
     $bpChanges = mysqli_real_escape_string($con, (int)$request->data->bpChanges);
     $unrestChanges = mysqli_real_escape_string($con, (int)$request->data->unrestChanges);
     $districtChanges = mysqli_real_escape_string($con, (int)$request->data->districtChanges);
     $hexfieldChanges = mysqli_real_escape_string($con, (int)$request->data->hexfieldChanges);
+    $infos = mysqli_real_escape_string($con, trim($request->data->infos));
 
 
     // Store.
